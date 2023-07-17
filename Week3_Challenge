@@ -1,1 +1,13 @@
-
+function LongestWord(sen) { 
+  sen=sen.replace(/[^a-zA-Z ]/ig,'')
+  words = sen.split(" ")
+  longWord = words[0]
+  for (i = 0; i<words.length; i ++) {
+  	if (words[i].length > longWord.length) {
+  	  longWord = words[i]	
+  	}
+  }
+ return longWord
+}
+// keep this function call here 
+console.log(LongestWord(readline()));
